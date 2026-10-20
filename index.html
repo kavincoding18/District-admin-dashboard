@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DISTRICT ADMIN — Tamil Nadu Collectorate Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <!-- Sidebar -->
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-brand">
+          <span class="emblem">TN</span>
+          <div class="brand-text">
+            <span class="brand-title">District Admin</span>
+            <span class="brand-sub">Collectorate</span>
+          </div>
+        </div>
+        <nav class="nav" id="nav">
+          <a href="#dashboard" class="nav-item active" data-section="dashboard">Dashboard</a>
+          <a href="#daily" class="nav-item" data-section="daily">Daily Planner</a>
+          <a href="#weekly" class="nav-item" data-section="weekly">Weekly Planner</a>
+          <a href="#monthly" class="nav-item" data-section="monthly">Monthly Planner</a>
+          <a href="#grievances" class="nav-item" data-section="grievances">Public Grievances</a>
+          <a href="#projects" class="nav-item" data-section="projects">Development Projects</a>
+          <a href="#meetings" class="nav-item" data-section="meetings">Meetings & Events</a>
+          <a href="#documents" class="nav-item" data-section="documents">Document Register</a>
+          <a href="#departments" class="nav-item" data-section="departments">Department Tracker</a>
+          <a href="#laworder" class="nav-item" data-section="laworder">Law & Order Coordination</a>
+          <a href="#visits" class="nav-item" data-section="visits">VIP & Official Visits</a>
+          <a href="#disaster" class="nav-item" data-section="disaster">Disaster Management</a>
+          <a href="#reports" class="nav-item" data-section="reports">Reports</a>
+          <a href="#settings" class="nav-item" data-section="settings">Settings</a>
+        </nav>
+        <div class="sidebar-foot">
+          <span class="dot demo"></span> Demonstration Prototype
+        </div>
+      </aside>
+
+      <!-- Main -->
+      <main class="main">
+        <header class="topbar">
+          <button class="icon-btn" id="sidebarToggle" aria-label="Toggle sidebar">☰</button>
+          <div class="topbar-titles">
+            <div class="gov-line">Government of Tamil Nadu</div>
+            <div class="dash-line">District Collectorate Administration Dashboard</div>
+          </div>
+          <div class="topbar-right">
+            <label class="district-select">
+              <span class="sel-label">District</span>
+              <select id="districtSelect">
+                <option>Tiruchirappalli</option>
+                <option>Chennai</option>
+                <option>Madurai</option>
+                <option>Coimbatore</option>
+                <option>Salem</option>
+                <option>Thanjavur</option>
+              </select>
+            </label>
+          </div>
+        </header>
+
+        <div class="kural-bar">
+          <div class="kural-tamil">இயற்றலும் ஈட்டலும் காத்தலும் காத்த<br>வகுத்தலும் வல்லது அரசு.</div>
+          <div class="kural-translit">Iyatralum eettalum kaathalum kaatha<br>Vaguthalum valladhu arasu.</div>
+          <div class="kural-mean">Thirukkural 385 — A government is one that can generate resources, acquire them, preserve them and distribute them appropriately.</div>
+        </div>
+
+        <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+        <section class="content" id="content">
+          <!-- Sections rendered here by script.js -->
+        </section>
+
+        <footer class="footer">
+          <span>Independent demonstration prototype. Not an official Government of Tamil Nadu website. All records are fictional.</span>
+        </footer>
+      </main>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal-overlay" id="modalOverlay" hidden>
+      <div class="modal" id="modal" role="dialog" aria-modal="true">
+        <div class="modal-head">
+          <h3 id="modalTitle">Modal</h3>
+          <button class="icon-btn" id="modalClose" aria-label="Close">✕</button>
+        </div>
+        <div class="modal-body" id="modalBody"></div>
+      </div>
+    </div>
+
+    <!-- Confirm -->
+    <div class="modal-overlay" id="confirmOverlay" hidden>
+      <div class="modal modal-sm" role="alertdialog" aria-modal="true">
+        <div class="modal-head">
+          <h3 id="confirmTitle">Confirm</h3>
+        </div>
+        <div class="modal-body">
+          <p id="confirmText">Are you sure?</p>
+        </div>
+        <div class="modal-foot">
+          <button class="btn btn-ghost" id="confirmCancel">Cancel</button>
+          <button class="btn btn-danger" id="confirmOk">Confirm</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
